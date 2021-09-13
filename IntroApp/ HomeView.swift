@@ -45,6 +45,14 @@ struct EMNDesignSystem {
     static let pillImage = Image(systemName: "plus.circle.fill")
     static let paddingEdges: Edge.Set = [.leading]
     static let leadingSpacing: CGFloat = 24
+    
+    struct TextColors{
+        static let primary = Color.blue
+    }
+    struct TextSizes{
+        static let largeTitle = UIFont.preferredFont(forTextStyle: .largeTitle)
+        static let customLargeTitle = UIFont.systemFont(ofSize: 38, weight: .bold)
+    }
 }
 
 struct ListView: View {
@@ -64,6 +72,7 @@ struct ListCellView: View {
                         EMNDesignSystem.paddingEdges,
                         EMNDesignSystem.leadingSpacing
                     )
+                    .foregroundColor(EMNDesignSystem.TextColors.primary)
                 Spacer()
                 EMNDesignSystem.pillImage
             }
